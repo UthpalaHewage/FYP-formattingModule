@@ -1,6 +1,6 @@
 # Import spaCy and load the language library
 import spacy
-
+import re
 import contraction_removal
 
 # load small version of english library
@@ -14,8 +14,16 @@ class sentence_segmentation:
         pass
 
     def sent_segment(self):
-        with open('sample.txt', 'r') as file:
+        with open('sampletranscript.txt', 'r') as file:
             data = file.read().replace('\n', ' ')
+            print(data)
+
+            # formatted_text = re.sub(" +", " ", data)
+            # print(formatted_text)
+
+            with open("formattedFile.txt", "w") as text_file:
+                print("{}".format(data), file=text_file)
+
             doc = nlp(data)
             for sent in doc.sents:
                 self.contraction_removal_obj.expand_contractions(str(sent))
