@@ -26,6 +26,7 @@ class sentence_segmentation:
 
             doc = nlp(data)
             for sent in doc.sents:
+
                 self.contraction_removal_obj.expand_contractions(str(sent))
 
 
