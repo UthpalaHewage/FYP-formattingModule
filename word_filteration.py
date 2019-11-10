@@ -8,6 +8,7 @@ import punctuation_removal
 class word_filteration:
     punctuation_removal_obj = punctuation_removal.punctuation_removal()
 
+
     def __init__(self):
         pass
 
@@ -24,6 +25,7 @@ class word_filteration:
         print(filtered_text)
 
         self.punctuation_removal_obj.remove_punct(filtered_text)
+
 
 
 

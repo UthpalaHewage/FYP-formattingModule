@@ -3,9 +3,11 @@ import nltk
 # to install contractions - pip install contractions
 from contractions import contractions_dict
 import word_filteration
+import quoted_text
 
 class contraction_removal:
     word_filteration_obj = word_filteration.word_filteration()
+    quoted_text_obj = quoted_text.quoted_text()
 
     def __init__(self):
         pass
@@ -32,6 +34,7 @@ class contraction_removal:
         self.word_filteration_obj.remove_stopwords(expanded_text)
         # self.tokenize_sentence(expanded_text)
 
+        self.quoted_text_obj.extract_quoted_text(expanded_text)
 
     def tokenize_sentence(self,text):
         sentence = nltk.sent_tokenize(text)
