@@ -2,9 +2,10 @@ import re
 import nltk
 # to install contractions - pip install contractions
 from contractions import contractions_dict
-
+import word_filteration
 
 class contraction_removal:
+    word_filteration_obj = word_filteration.word_filteration()
 
     def __init__(self):
         pass
@@ -27,6 +28,7 @@ class contraction_removal:
 
         expanded_text = contractions_pattern.sub(expand_match, text)
         print(expanded_text)
+        self.word_filteration_obj.remove_stopwords(text)
         # self.tokenize_sentence(expanded_text)
 
 
