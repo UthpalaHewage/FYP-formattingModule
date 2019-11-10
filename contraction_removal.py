@@ -27,8 +27,9 @@ class contraction_removal:
             return expanded_contraction
 
         expanded_text = contractions_pattern.sub(expand_match, text)
+        print("--expand contractions--")
         print(expanded_text)
-        self.word_filteration_obj.remove_stopwords(text)
+        self.word_filteration_obj.remove_stopwords(expanded_text)
         # self.tokenize_sentence(expanded_text)
 
 
