@@ -15,8 +15,8 @@ class sentence_segmentation:
         pass
 
     def sent_segment(self):
-        with open('kachal.txt', 'r') as file:
-        # with open('test1.txt', 'r') as file:
+        with open('files/kachal.txt', 'r') as file:
+        # with open('files/test1.txt', 'r') as file:
             data = file.read().replace('\n', ' ')
             # print(data)
 
@@ -24,11 +24,9 @@ class sentence_segmentation:
                 print("{}".format(data), file=text_file)
 
             doc = nlp(data)
-
+            sent_list = []
             for sent in doc.sents:
-                print(sent)
                 sentence = str(sent)[0].lower() + str(sent)[1:]
-                print(" ")
-                print(" ")
+                sent_list.append(sentence)
 
-                self.contraction_removal_obj.expand_contractions(sentence)
+            self.contraction_removal_obj.expand_contractions(sent_list)
