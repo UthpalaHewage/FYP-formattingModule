@@ -14,7 +14,7 @@ class word_filteration:
 
 
     def remove_stopwords(self,text):
-        words_filteration = ['This', 'sentence','following']
+        words_filteration = ['hello', 'welcome','so','however,','however','greetings']
         clean_sent = []
         for w in word_tokenize(text):
             if not w in words_filteration:
@@ -24,7 +24,11 @@ class word_filteration:
         print("--word filtered--")
         print(filtered_text)
 
+        # with open("output1.txt", "w") as text_file:
+        #     print("{}".format(filtered_text), file=text_file)
+
         self.punctuation_removal_obj.remove_punct(filtered_text)
+
 
 
 
