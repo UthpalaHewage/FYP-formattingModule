@@ -1,3 +1,4 @@
+# not yet connected
 import spacy
 nlp = spacy.load('en_core_web_sm')
 from string import punctuation
