@@ -5,7 +5,9 @@ from contractions import contractions_dict
 import word_filteration
 import quoted_text
 
+
 class contraction_removal:
+    contractions_dict.update({'i\'m': 'i am'})
     word_filteration_obj = word_filteration.word_filteration()
     quoted_text_obj = quoted_text.quoted_text()
 
@@ -13,11 +15,9 @@ class contraction_removal:
         pass
 
     def expand_contractions(self, sentence_list):
-
         contractions_pattern = re.compile('({})'.format('|'.join(contractions_dict.keys())))
 
         def expand_match(contraction):
-
             # print(contraction)
             match = contraction.group(0)
             first_char = match[0]
@@ -30,7 +30,6 @@ class contraction_removal:
 
         removed_contractions_sentence_list = []
         for sentense in sentence_list:
-
             expanded_text = contractions_pattern.sub(expand_match, sentense)
             # print("--expand contractions--")
             # print(expanded_text)
