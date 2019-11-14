@@ -13,8 +13,8 @@ class sentence_segmentation:
         pass
 
     def sent_segment(self):
-        # with open('files/kachal.txt', 'r') as file:
-        with open('files/informal collection.txt', 'r') as file:
+        with open('files/kachal.txt', 'r') as file:
+        # with open('files/informal collection.txt', 'r') as file:
             data = file.read().replace('\n', ' ')
             # print(data)
 

@@ -1,11 +1,14 @@
 import Model.fact_dict as dict
 import spacy
+import command_detection
 
 nlp = spacy.load('en_core_web_sm')
 
 
 # the sentence segment of the identified facts' sentence will be modified into present tense if available with any other tense
 class sent_modify_fact_detection:
+
+    command_detection_obj = command_detection.command_detection()
 
     def __init__(self):
         pass
@@ -28,12 +31,13 @@ class sent_modify_fact_detection:
                     # to get out of the conversion process
                     break
 
-        for key in keys_list:
-            print(sent_list[key])
-        print("--------------")
+        # for key in keys_list:
+        #     print(sent_list[key])
+        # print("--------------")
+        # for sent in sent_list:
+        #     print(sent)
 
-        for sent in sent_list:
-            print(sent)
+        self.command_detection_obj.command_det(sent_list)
 
     def get_list_of_facts(self, sent_list):
         keys = []
