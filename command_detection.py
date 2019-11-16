@@ -3,6 +3,7 @@ nlp = spacy.load('en_core_web_sm')
 
 class command_detection:
 
+    # replacement =  {"####"}
     def __init__(self):
         pass
 
@@ -12,9 +13,17 @@ class command_detection:
             # make the first letter of the selected sentence into upper case because if not named entities will also be detect as base verbs
             sentence = (sent_list[i])[0].upper() + str(sent_list[i])[1:]
             sentence = nlp(sentence)
-            # print(f'{sentense[0].text:{10}} {sentense[0].tag_}')
+            # print(f'{sentence[0].text:{10}} {sentence[0].tag_}')
 
             if str(sentence[0].tag_) == 'VB' :
-                print(sent_list[i]) 
+                # replace the position with # for later use
+                sent_list[i] = '#'
+
+
+        for sent in sent_list:
+            print(sent)
+
+
+
 
 

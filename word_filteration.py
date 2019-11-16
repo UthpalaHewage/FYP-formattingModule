@@ -1,3 +1,12 @@
+# Perform standard imports
+import spacy
+
+nlp = spacy.load('en_core_web_sm')
+# Import the Matcher library
+from spacy.matcher import Matcher
+
+matcher = Matcher(nlp.vocab)
+
 import fact_detection
 
 
@@ -10,8 +19,8 @@ class word_filteration:
     def remove_stopwords(self, sentence_list):
 
         # declare list of words that need to be filtered out directly
-        words_filteration = ['hello', 'welcome', 'so', 'however,', 'however', 'greetings', 'hi,', 'dude,',
-                             'good morning', 'please']
+        words_filteration = ['hello', 'welcome', 'so', 'however', 'greetings', 'hi,', 'dude,',
+                             'good morning', 'please', 'solar power']
 
         sent_list = []
         for sentence in sentence_list:
@@ -22,6 +31,7 @@ class word_filteration:
             for w in list:
                 if not w in words_filteration:
                     clean_sent.append(w)
+            # print(list)
 
             # check for the sentence fragments whether it sstiafy the general conditions to be a sentence (availablity of min of 3 word)
             if len(clean_sent) > 2:
