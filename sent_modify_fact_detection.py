@@ -7,7 +7,6 @@ nlp = spacy.load('en_core_web_sm')
 
 # the sentence segment of the identified facts' sentence will be modified into present tense if available with any other tense
 class sent_modify_fact_detection:
-
     command_detection_obj = command_detection.command_detection()
 
     def __init__(self):
@@ -27,7 +26,7 @@ class sent_modify_fact_detection:
                     # If it is any other tense convert to base form - (lemma_)
                     new_sent = str(tokenized_sent[:token.i]) + " " + str(token.lemma_) + " " + str(
                         tokenized_sent[token.i + 1:])
-                    sent_list[key] = new_sent
+                    sent_list[key] = new_sent.strip()
                     # to get out of the conversion process
                     break
 

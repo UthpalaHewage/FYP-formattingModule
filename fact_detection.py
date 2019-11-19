@@ -26,11 +26,28 @@ class fact_detection:
                 dict.facts_on_colon.update({i: sent_list[i][index:]})
                 sent_list[i] = sent_list[i][:index]
 
-        self.detect_by_quotes(sent_list)
+        self.detect_by_semicolon(sent_list)
 
         # # printing the dict
         # for key in dict.facts_on_colon:
         #     print(dict.facts_on_colon[key])
+
+    def detect_by_semicolon(self, sent_list):
+
+        for i in range(len(sent_list)):
+
+            if ";" in sent_list[i]:
+                index = sent_list[i].index(";")
+                # dictionary is updated with the index respect to the fact identified with semicolon
+                dict.facts_on_semicolon.update({i: sent_list[i][index:]})
+                sent_list[i] = sent_list[i][:index]
+
+        self.detect_by_quotes(sent_list)
+
+        # printing the dict
+        # for key in dict.facts_on_semicolon:
+        #     print("semicolon dict")
+        #     print(dict.facts_on_semicolon[key])
 
     def detect_by_quotes(self, sent_list):
 
@@ -41,7 +58,11 @@ class fact_detection:
                 # print(sent_list[i])
                 # dictionary is updated with the index respect to the fact identified with quotes
                 dict.facts_on_quotes.update({i: sent_list[i][result.start():]})
-                sent_list[i] = sent_list[i][:result.start()]
+                # if the sentence(output) begins with a quote it will completely replaced with ## for later use
+                if result.start() == 0:
+                    sent_list[i] = "##"
+                else:
+                    sent_list[i] = sent_list[i][:result.start()]
 
         # for sentence in sent_list:
         #     print(sentence)

@@ -18,7 +18,7 @@ class word_filteration:
 
     def remove_stopwords(self, sentence_list):
 
-        # declare list of words that need to be filtered out directly
+        # declare list of words that need to be filtered out directly-stop words
         words_filteration = ['hello', 'welcome', 'so', 'however', 'greetings', 'hi,', 'dude,',
                              'good morning', 'please', 'solar power']
 
