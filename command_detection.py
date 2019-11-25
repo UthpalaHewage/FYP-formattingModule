@@ -22,5 +22,5 @@ class command_detection:
                 sent_list[i] = '#'
             # print(sent_list[i])
 
-        for sent in sent_list:
-            print(sent)
+        # for sent in sent_list:
+        #     print(sent)

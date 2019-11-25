@@ -3,6 +3,7 @@ import spacy
 import nltk
 from nltk import tokenize
 import contraction_removal
+import question_detection
 
 # load small version of english library
 nlp = spacy.load('en_core_web_sm')
@@ -10,6 +11,7 @@ nlp = spacy.load('en_core_web_sm')
 
 class sentence_segmentation:
     contraction_removal_obj = contraction_removal.contraction_removal()
+    question_detection_obj = question_detection.question_detection()
 
     def __init__(self):
         pass
@@ -27,10 +29,16 @@ class sentence_segmentation:
             sent_list = []
             # obtain sentences
             for sent in list:
-                # make the first letter of the sentence into lower case
-                sentence = str(sent)[0].lower() + str(sent)[1:]
-                # make the array with list of sentences
-                sent_list.append(sentence.strip())
-                # print(sent)
+                sent = str(sent)
+                # filter out the questions available
+                check_question = self.question_detection_obj.identify_questions(sent)
+                if check_question:
+                    pass
+                else:
+                    # make the first letter of the sentence into lower case
+                    sentence = sent[0].lower() + sent[1:]
+                    # make the array with list of sentences
+                    sent_list.append(sentence.strip())
+                    # print(sent)
 
             self.contraction_removal_obj.expand_contractions(sent_list)

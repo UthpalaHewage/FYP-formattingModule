@@ -64,18 +64,21 @@ class fact_detection:
                 else:
                     sent_list[i] = sent_list[i][:result.start()]
 
-        # for sentence in sent_list:
-        #     print(sentence)
-        #     print(" ")
+        for sentence in sent_list:
+            print(sentence)
+            print(" ")
 
-        self.sent_modify_fact_detection_obj.sent_modify(sent_list)
+        # self.sent_modify_fact_detection_obj.sent_modify(sent_list)
 
     def detect_by_phrase_matching(self, sent_list):
 
         matcher = PhraseMatcher(nlp.vocab)
         # Create a list of match phrases:
-        phrase_list = ['as an example', 'for an example', 'such as', 'other examples', 'some of them', 'for instance',
-                       'to give you an idea', 'as proof', 'suppose that', 'for example']
+        # phrase_list = ['as an example', 'for an example', 'such as', 'other examples', 'some of them', 'for instance',
+        #                'to give you an idea', 'as proof', 'suppose that', 'for example']
+
+        # need to declare different patterns
+        phrase_list = ['for example', 'examples are', 'examples include', 'another example', 'is an example', 'in this example', 'take the example of ', 'take this example', 'further examples are', 'some common examples of', 'such as', 'examples of']
 
         # Convert each phrase to a Doc object:
         phrase_patterns = [nlp(text) for text in phrase_list]
