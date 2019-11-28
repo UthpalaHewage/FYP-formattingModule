@@ -65,10 +65,10 @@ class fact_detection:
 
         matcher = PhraseMatcher(nlp.vocab)
 
-        # need to declare different patterns
-        phrase_list = ['for example', 'examples are', 'examples include', 'another example', 'is an example',
-                       'in this example', 'take the example of ', 'take this example', 'further examples are',
-                       'are some common examples of', 'such as', 'examples of', 'some examples']
+        # need to declare different phrases- added to phrase_list_for_fact_detection
+        phrase_list = []
+        with open('Model/phrase_list_for_fact_detection.txt', 'r') as file:
+            phrase_list = ["" + line.strip() + "" for line in file]
 
         # Convert each phrase to a Doc object:
         phrase_patterns = [nlp(text) for text in phrase_list]
