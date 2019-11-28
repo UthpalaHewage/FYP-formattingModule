@@ -12,6 +12,7 @@ class contraction_removal:
     def __init__(self):
         pass
 
+    # to get the expanded form of contraction with expand_match
     def expand_contractions(self, sentence_list):
         contractions_pattern = re.compile('({})'.format('|'.join(contractions_dict.keys())))
 
@@ -22,14 +23,13 @@ class contraction_removal:
                 if contractions_dict.get(match) \
                 else contractions_dict.get(match.lower())
             expanded_contraction = expanded_contraction
-            # print(expanded_contraction)
             return expanded_contraction
 
         removed_contractions_sentence_list = []
         for sentense in sentence_list:
+            # sub-for replacing the contraction with expanded form
             expanded_text = contractions_pattern.sub(expand_match, sentense)
-            # print(expanded_text)
             # join the expanded text into the original sentence
             removed_contractions_sentence_list.append(str(expanded_text))
 
-        self.word_filteration_obj.remove_stopwords(removed_contractions_sentence_list)
+        self.word_filteration_obj.remove_words_by_ruleBasedMatching(removed_contractions_sentence_list)

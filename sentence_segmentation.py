@@ -23,9 +23,6 @@ class sentence_segmentation:
             data = file.read()
             list = tokenize.sent_tokenize(data.replace("\n", " "))
 
-            with open("formattedFile.txt", "w") as text_file:
-                print("{}".format(data), file=text_file)
-
             sent_list = []
             # obtain sentences
             for sent in list:

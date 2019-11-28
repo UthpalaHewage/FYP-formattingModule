@@ -28,10 +28,6 @@ class fact_detection:
 
         self.detect_by_semicolon(sent_list)
 
-        # # printing the dict
-        # for key in dict.facts_on_colon:
-        #     print(dict.facts_on_colon[key])
-
     def detect_by_semicolon(self, sent_list):
 
         for i in range(len(sent_list)):
@@ -55,7 +51,6 @@ class fact_detection:
             # search for the pattern defined above
             result = self.pattern.search(sent_list[i])
             if result is not None:
-                # print(sent_list[i])
                 # dictionary is updated with the index respect to the fact identified with quotes
                 dict.facts_on_quotes.update({i: sent_list[i][result.start():]})
                 # if the sentence(output) begins with a quote it will completely replaced with ## for later use
@@ -64,21 +59,16 @@ class fact_detection:
                 else:
                     sent_list[i] = sent_list[i][:result.start()]
 
-        for sentence in sent_list:
-            print(sentence)
-            print(" ")
-
-        # self.sent_modify_fact_detection_obj.sent_modify(sent_list)
+        self.sent_modify_fact_detection_obj.sent_modify(sent_list)
 
     def detect_by_phrase_matching(self, sent_list):
 
         matcher = PhraseMatcher(nlp.vocab)
-        # Create a list of match phrases:
-        # phrase_list = ['as an example', 'for an example', 'such as', 'other examples', 'some of them', 'for instance',
-        #                'to give you an idea', 'as proof', 'suppose that', 'for example']
 
         # need to declare different patterns
-        phrase_list = ['for example', 'examples are', 'examples include', 'another example', 'is an example', 'in this example', 'take the example of ', 'take this example', 'further examples are', 'some common examples of', 'such as', 'examples of']
+        phrase_list = ['for example', 'examples are', 'examples include', 'another example', 'is an example',
+                       'in this example', 'take the example of ', 'take this example', 'further examples are',
+                       'are some common examples of', 'such as', 'examples of', 'some examples']
 
         # Convert each phrase to a Doc object:
         phrase_patterns = [nlp(text) for text in phrase_list]

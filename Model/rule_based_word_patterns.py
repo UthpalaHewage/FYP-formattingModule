@@ -16,6 +16,14 @@ here_p1 = [{'LOWER': 'here'}, {'IS_PUNCT': True, 'OP': '?'}]
 indeed_p1 = [{'LOWER': 'indeed'}, {'IS_PUNCT': True, 'OP': '?'}]
 everyone_p1 = [{'LOWER': 'everyone'}, {'IS_PUNCT': True, 'OP': '?'}]
 hi_p1 = [{'LOWER': 'hi'}, {'IS_PUNCT': True, 'OP': '?'}]
+welcome_p1 = [{'LOWER': 'welcome'}, {'IS_PUNCT': True, 'OP': '?'}]
+gosh_p1 = [{'LOWER': 'gosh'}, {'IS_PUNCT': True, 'OP': '?'}]
+so_p1 = [{'LOWER': 'so'}, {'IS_PUNCT': True, 'OP': '?'}]
+shun_p1 = [{'LOWER': 'shun'}, {'IS_PUNCT': True, 'OP': '?'}]
+gasp_p1 = [{'LOWER': 'gasp'}, {'IS_PUNCT': True, 'OP': '?'}]
+dude_p1 = [{'LOWER': 'dude'}, {'IS_PUNCT': True, 'OP': '?'}]
+good_morning_p1 = [{'LOWER': 'good'},{'LOWER': 'morning'}, {'IS_PUNCT': True, 'OP': '?'}]
+never_mind_p1 = [{'LOWER': 'never'},{'LOWER': 'mind'}, {'IS_PUNCT': True, 'OP': '?'}]
 
 
 dict.update({"hello_p1": hello_p1})
@@ -34,3 +42,11 @@ dict.update({"here_p1": here_p1})
 dict.update({"indeed_p1": indeed_p1})
 dict.update({"everyone_p1": everyone_p1})
 dict.update({"hi_p1": hi_p1})
+dict.update({"welcome_p1": welcome_p1})
+dict.update({"gosh_p1": gosh_p1})
+dict.update({"so_p1": so_p1})
+dict.update({"shun_p1": shun_p1})
+dict.update({"gasp_p1": gasp_p1})
+dict.update({"dude_p1": dude_p1})
+dict.update({"good_morning_p1": good_morning_p1})
+dict.update({"never_mind_p1": never_mind_p1})

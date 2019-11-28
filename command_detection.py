@@ -20,7 +20,6 @@ class command_detection:
             if str(sentence[0].tag_) == 'VB':
                 # replace the position with # for later use
                 sent_list[i] = '#'
-            # print(sent_list[i])
 
-        # for sent in sent_list:
-        #     print(sent)
+        for sent in sent_list:
+            print(sent)
