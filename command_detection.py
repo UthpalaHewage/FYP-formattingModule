@@ -1,9 +1,11 @@
 import spacy
+import informal_word_replacement
 
 nlp = spacy.load('en_core_web_sm')
 
 
 class command_detection:
+    informal_word_replacement_obj =informal_word_replacement.informal_word_replacement()
 
     # replacement =  {"####"}
     def __init__(self):
@@ -21,5 +23,7 @@ class command_detection:
                 # replace the position with # for later use
                 sent_list[i] = '#'
 
-        for sent in sent_list:
-            print(sent)
+        # for sent in sent_list:
+        #     print(sent)
+
+        self.informal_word_replacement_obj.informal_word_detection(sent_list)

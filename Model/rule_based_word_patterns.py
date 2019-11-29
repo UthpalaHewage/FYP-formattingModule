@@ -24,6 +24,7 @@ gasp_p1 = [{'LOWER': 'gasp'}, {'IS_PUNCT': True, 'OP': '?'}]
 dude_p1 = [{'LOWER': 'dude'}, {'IS_PUNCT': True, 'OP': '?'}]
 good_morning_p1 = [{'LOWER': 'good'},{'LOWER': 'morning'}, {'IS_PUNCT': True, 'OP': '?'}]
 never_mind_p1 = [{'LOWER': 'never'},{'LOWER': 'mind'}, {'IS_PUNCT': True, 'OP': '?'}]
+hey_p1 = [{'LOWER': 'hey'}, {'IS_PUNCT': True, 'OP': '?'}]
 
 
 dict.update({"hello_p1": hello_p1})
@@ -50,3 +51,4 @@ dict.update({"gasp_p1": gasp_p1})
 dict.update({"dude_p1": dude_p1})
 dict.update({"good_morning_p1": good_morning_p1})
 dict.update({"never_mind_p1": never_mind_p1})
+dict.update({"hey_p1": hey_p1})
