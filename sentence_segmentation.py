@@ -6,6 +6,7 @@ import contraction_removal
 import question_detection
 
 # load small version of english library
+# python -m spacy download en_core_web_sm
 nlp = spacy.load('en_core_web_sm')
 
 

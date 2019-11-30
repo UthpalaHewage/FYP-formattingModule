@@ -3,9 +3,12 @@ import string
 
 nlp = spacy.load('en_core_web_sm')
 from spacy.matcher import PhraseMatcher
+import tense_conversion.future_tense_identification as future_tense_detection
+
 
 
 class informal_word_replacement:
+    tense_conversion_obj = future_tense_detection.future_tense_identification()
 
     def __init__(self):
         pass
@@ -33,13 +36,17 @@ class informal_word_replacement:
                 # print(sentense[matches[0][1]:matches[0][2]])
                 new_sent = ""
                 previous_end = None
+                # get match the informal word with formal word
                 for match in matches:
                     informal_word = str(sentense[match[1]:match[2]])
+                    # get  the index with respect to the informal word
                     index = informal_word_list.index(informal_word)
+                    # get the respective formal word upon the index
                     formal_word = formal_word_list[index]
 
                     if previous_end == None:
                         new_sent = new_sent + str(sentense[:match[1]]).strip() + " " + formal_word
+                        # if next character is not a punctuation need to put a space
                         if str(sentense[match[2]]) not in punctuation_list:
                             new_sent = new_sent + " "
                             previous_end = match[2]
@@ -49,7 +56,7 @@ class informal_word_replacement:
                     else:
 
                         new_sent = new_sent + str(sentense[previous_end:match[1]]).strip() + " " + formal_word
-
+                        # if next character is not a punctuation need to put a space
                         if str(sentense[match[2]]) not in punctuation_list:
                             new_sent = new_sent + " "
                             previous_end = match[2]
@@ -57,7 +64,10 @@ class informal_word_replacement:
                             previous_end = match[2]
 
                 new_sent = new_sent + str(sentense[previous_end:]).strip()
-                print(new_sent.strip())
+                # print(new_sent.strip())
 
-        # for sent in sent_list:
-        #     print(sent)
+                sent_list[i] = new_sent.strip()
+
+
+
+        self.tense_conversion_obj.future_tense_det(sent_list)

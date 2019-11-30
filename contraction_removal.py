@@ -19,9 +19,11 @@ class contraction_removal:
         def expand_match(contraction):
             match = contraction.group(0)
             first_char = match[0]
+            # make the selection for expanded form
             expanded_contraction = contractions_dict.get(match) \
                 if contractions_dict.get(match) \
                 else contractions_dict.get(match.lower())
+            # assign the expanded form into expanded_contraction
             expanded_contraction = expanded_contraction
             return expanded_contraction
 

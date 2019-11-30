@@ -22,6 +22,7 @@ class word_filteration:
     def remove_words_by_ruleBasedMatching(self, sent_list):
 
         filtered_list = []
+        # getting ist of patterns for removal of unnecessary word
         for pattern in pattern_dict.dict:
             matcher.add(pattern, None, pattern_dict.dict[pattern])
 
@@ -30,22 +31,27 @@ class word_filteration:
             found_matches = matcher(doc)
 
             sentence = ""
+            # declare variable for later use
             previous_end = None
+            # check for the matching words in the list
             if len(found_matches) != 0:
                 for matches in found_matches:
                     if previous_end == None:
+                        # at the initial point make the match to filter
                         sentence = sentence + " " + str(doc[:matches[1]]).strip()
                         previous_end = matches[2]
 
                     else:
-
+                        # continue to match and filter and progress
                         sentence = sentence + " " + str(doc[previous_end:matches[1]]).strip()
                         previous_end = matches[2]
 
+                # finalized the output after filteration
                 sentence = sentence + " " + str(doc[previous_end:]).strip()
                 sent_list[i] = sentence.strip()
 
-            if len(sent_list[i].strip()) > 2:
+            # split is used here to get the number of word(count with aid of white space)
+            if len(sent_list[i].strip().split()) > 2:
                 filtered_list.append(sent_list[i])
 
         # check for the sentence fragments whether it sstiafy the general conditions to be a sentence (availablity of min of 3 word)
