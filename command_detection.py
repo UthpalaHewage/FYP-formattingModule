@@ -19,6 +19,7 @@ class command_detection:
             sentence = nlp(sentence)
             # print(f'{sentence[0].text:{10}} {sentence[0].tag_}')
 
+            # check whether the sent begin with base form of verb
             if str(sentence[0].tag_) == 'VB':
                 # replace the position with # for later use
                 sent_list[i] = '#'

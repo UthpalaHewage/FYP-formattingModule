@@ -24,7 +24,7 @@ class contraction_removal:
                 if contractions_dict.get(match) \
                 else contractions_dict.get(match.lower())
             # assign the expanded form into expanded_contraction
-            expanded_contraction = expanded_contraction
+            # expanded_contraction = expanded_contraction
             return expanded_contraction
 
         removed_contractions_sentence_list = []
@@ -33,5 +33,8 @@ class contraction_removal:
             expanded_text = contractions_pattern.sub(expand_match, sentense)
             # join the expanded text into the original sentence
             removed_contractions_sentence_list.append(str(expanded_text))
+
+        # for sent in removed_contractions_sentence_list:
+        #     print(sent)
 
         self.word_filteration_obj.remove_words_by_ruleBasedMatching(removed_contractions_sentence_list)

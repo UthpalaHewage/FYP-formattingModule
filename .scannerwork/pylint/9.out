@@ -1,0 +1,15 @@
+************* Module sentence_segmentation
+sentence_segmentation.py:1: [C0114(missing-module-docstring), ] Missing module docstring
+sentence_segmentation.py:10: [C0103(invalid-name), ] Constant name "nlp" doesn't conform to UPPER_CASE naming style
+sentence_segmentation.py:13: [C0103(invalid-name), sentence_segmentation] Class name "sentence_segmentation" doesn't conform to PascalCase naming style
+sentence_segmentation.py:13: [C0115(missing-class-docstring), sentence_segmentation] Missing class docstring
+sentence_segmentation.py:20: [C0116(missing-function-docstring), sentence_segmentation.sent_segment] Missing function or method docstring
+sentence_segmentation.py:25: [W0622(redefined-builtin), sentence_segmentation.sent_segment] Redefining built-in 'list'
+sentence_segmentation.py:13: [R0903(too-few-public-methods), sentence_segmentation] Too few public methods (1/2)
+sentence_segmentation.py:3: [W0611(unused-import), ] Unused import nltk
+
+------------------------------------------------------------------
+
+Your code has been rated at 6.67/10 (previous run: 6.67/10, +0.00)
+
+

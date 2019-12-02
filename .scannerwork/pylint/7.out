@@ -1,0 +1,15 @@
+************* Module question_detection
+question_detection.py:1: [C0114(missing-module-docstring), ] Missing module docstring
+question_detection.py:1: [C0103(invalid-name), question_detection] Class name "question_detection" doesn't conform to PascalCase naming style
+question_detection.py:1: [C0115(missing-class-docstring), question_detection] Missing class docstring
+question_detection.py:5: [C0116(missing-function-docstring), question_detection.identify_questions] Missing function or method docstring
+question_detection.py:6: [R1703(simplifiable-if-statement), question_detection.identify_questions] The if statement can be replaced with 'return bool(test)'
+question_detection.py:6: [R1705(no-else-return), question_detection.identify_questions] Unnecessary "else" after "return"
+question_detection.py:5: [R0201(no-self-use), question_detection.identify_questions] Method could be a function
+question_detection.py:1: [R0903(too-few-public-methods), question_detection] Too few public methods (1/2)
+
+--------------------------------------------------------------------
+
+Your code has been rated at -1.43/10 (previous run: -1.43/10, +0.00)
+
+

@@ -1,0 +1,6 @@
+projectKey=FYP_FormattingModule
+serverUrl=http://localhost:9000
+serverVersion=7.6.0.21501
+dashboardUrl=http://localhost:9000/dashboard?id=FYP_FormattingModule
+ceTaskId=AW7AutD9MBpBCB0EK_ye
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AW7AutD9MBpBCB0EK_ye

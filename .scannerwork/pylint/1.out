@@ -1,0 +1,44 @@
+************* Module rule_based_word_patterns
+Model\rule_based_word_patterns.py:25: [C0326(bad-whitespace), ] Exactly one space required after comma
+good_morning_p1 = [{'LOWER': 'good'},{'LOWER': 'morning'}, {'IS_PUNCT': True, 'OP': '?'}]
+
+                                    ^
+Model\rule_based_word_patterns.py:26: [C0326(bad-whitespace), ] Exactly one space required after comma
+never_mind_p1 = [{'LOWER': 'never'},{'LOWER': 'mind'}, {'IS_PUNCT': True, 'OP': '?'}]
+
+                                   ^
+Model\rule_based_word_patterns.py:54: [C0304(missing-final-newline), ] Final newline missing
+Model\rule_based_word_patterns.py:1: [C0114(missing-module-docstring), ] Missing module docstring
+Model\rule_based_word_patterns.py:1: [W0622(redefined-builtin), ] Redefining built-in 'dict'
+Model\rule_based_word_patterns.py:1: [C0103(invalid-name), ] Constant name "dict" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:3: [C0103(invalid-name), ] Constant name "hello_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:4: [C0103(invalid-name), ] Constant name "however_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:5: [C0103(invalid-name), ] Constant name "so_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:6: [C0103(invalid-name), ] Constant name "now_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:7: [C0103(invalid-name), ] Constant name "also_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:8: [C0103(invalid-name), ] Constant name "but_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:9: [C0103(invalid-name), ] Constant name "perhaps_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:10: [C0103(invalid-name), ] Constant name "or_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:11: [C0103(invalid-name), ] Constant name "again_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:12: [C0103(invalid-name), ] Constant name "greetings_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:13: [C0103(invalid-name), ] Constant name "sometimes_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:14: [C0103(invalid-name), ] Constant name "finally_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:15: [C0103(invalid-name), ] Constant name "here_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:16: [C0103(invalid-name), ] Constant name "indeed_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:17: [C0103(invalid-name), ] Constant name "everyone_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:18: [C0103(invalid-name), ] Constant name "hi_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:19: [C0103(invalid-name), ] Constant name "welcome_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:20: [C0103(invalid-name), ] Constant name "gosh_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:21: [C0103(invalid-name), ] Constant name "so_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:22: [C0103(invalid-name), ] Constant name "shun_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:23: [C0103(invalid-name), ] Constant name "gasp_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:24: [C0103(invalid-name), ] Constant name "dude_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:25: [C0103(invalid-name), ] Constant name "good_morning_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:26: [C0103(invalid-name), ] Constant name "never_mind_p1" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:27: [C0103(invalid-name), ] Constant name "hey_p1" doesn't conform to UPPER_CASE naming style
+
+------------------------------------------------------------------
+
+Your code has been rated at 3.92/10 (previous run: 3.92/10, +0.00)
+
+

@@ -1,0 +1,14 @@
+************* Module main
+main.py:8: [C0326(bad-whitespace), ] Exactly one space required around comparison
+if __name__=='__main__':
+
+           ^^
+main.py:9: [C0304(missing-final-newline), ] Final newline missing
+main.py:1: [C0114(missing-module-docstring), ] Missing module docstring
+main.py:3: [C0116(missing-function-docstring), main] Missing function or method docstring
+
+------------------------------------------------------------------
+
+Your code has been rated at 3.33/10 (previous run: 3.33/10, +0.00)
+
+

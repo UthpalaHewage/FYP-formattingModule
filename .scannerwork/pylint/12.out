@@ -1,0 +1,23 @@
+************* Module future_tense_identification
+tense_conversion\future_tense_identification.py:24: [C0301(line-too-long), ] Line too long (107/100)
+tense_conversion\future_tense_identification.py:26: [C0301(line-too-long), ] Line too long (107/100)
+tense_conversion\future_tense_identification.py:28: [C0301(line-too-long), ] Line too long (154/100)
+tense_conversion\future_tense_identification.py:37: [C0301(line-too-long), ] Line too long (145/100)
+tense_conversion\future_tense_identification.py:39: [C0301(line-too-long), ] Line too long (116/100)
+tense_conversion\future_tense_identification.py:62: [C0304(missing-final-newline), ] Final newline missing
+tense_conversion\future_tense_identification.py:1: [C0114(missing-module-docstring), ] Missing module docstring
+tense_conversion\future_tense_identification.py:2: [W0622(redefined-builtin), ] Redefining built-in 'dict'
+tense_conversion\future_tense_identification.py:4: [C0103(invalid-name), ] Constant name "nlp" doesn't conform to UPPER_CASE naming style
+tense_conversion\future_tense_identification.py:7: [C0103(invalid-name), future_tense_identification] Class name "future_tense_identification" doesn't conform to PascalCase naming style
+tense_conversion\future_tense_identification.py:7: [C0115(missing-class-docstring), future_tense_identification] Missing class docstring
+tense_conversion\future_tense_identification.py:13: [C0116(missing-function-docstring), future_tense_identification.future_tense_det] Missing function or method docstring
+tense_conversion\future_tense_identification.py:14: [C0200(consider-using-enumerate), future_tense_identification.future_tense_det] Consider using enumerate instead of iterating with range and len
+tense_conversion\future_tense_identification.py:21: [R0123(literal-comparison), future_tense_identification.future_tense_det] Comparison to literal
+tense_conversion\future_tense_identification.py:14: [R1702(too-many-nested-blocks), future_tense_identification.future_tense_det] Too many nested blocks (6/5)
+tense_conversion\future_tense_identification.py:7: [R0903(too-few-public-methods), future_tense_identification] Too few public methods (1/2)
+
+------------------------------------------------------------------
+
+Your code has been rated at 3.85/10 (previous run: 3.85/10, +0.00)
+
+

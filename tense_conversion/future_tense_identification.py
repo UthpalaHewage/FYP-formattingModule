@@ -1,10 +1,11 @@
 import spacy
 import tense_conversion.Models.verb_sub_container as dict
-
+import tense_conversion.continuous_tense_conversion as continuous_tense_conversion
 nlp = spacy.load('en_core_web_sm')
 
 
 class future_tense_identification:
+    continuous_tense_conversion_obj = continuous_tense_conversion.ContinuousTenseConversion()
 
     def __init__(self):
         pass
@@ -16,6 +17,7 @@ class future_tense_identification:
             aux_index = []
             root_verb_index = []
 
+            # get the sent not marked with #-(for command det) earlier
             if sent_list[i][0] is not "#":
                 sentense = nlp(sent_list[i][0].upper() + sent_list[i][1:])
 
@@ -51,8 +53,10 @@ class future_tense_identification:
                                 # replace the future tense sentences with "###"
                                 sent_list[i] = "###"
 
-        #print the updated index of dict with the respective sentense
-        for key in dict.verb_sub_dict:
-            print(sent_list[key])
-            print(dict.verb_sub_dict[key])
-            print("")
+        # #print the updated index of dict with the respective sentense
+        # for key in dict.verb_sub_dict:
+        #     print(sent_list[key])
+        #     print(dict.verb_sub_dict[key])
+        #     print("")
+
+        self.continuous_tense_conversion_obj.continuous_tense_con(sent_list)
