@@ -1,15 +1,22 @@
 """Identify the sentences in continuous form and make the tense conversion """
 import spacy
 import inflect
+# used to get the singular form of verb
 from pyinflect import getInflection
 import tense_conversion.Models.verb_sub_container as dict_container
-
+import tense_conversion.past_tense_conversion as past_tense_conversion
 
 nlp = spacy.load('en_core_web_sm')
 
 
 class ContinuousTenseConversion(object):
     """class for the tense conversion of continuous sentences"""
+
+    # import the method for the conversion of past tense sentences
+    past_tense_conversion_obj = past_tense_conversion.PastTenseConversion()
+
+    # check for the singular nature of noun..
+    # if the given noun is singular result- False. If not gives the singular form
     inflect = inflect.engine()
     # declare the aux_list need for the  conversion of tenses
     aux_list = ["is", "are", "am", "was", "were"]
@@ -19,11 +26,9 @@ class ContinuousTenseConversion(object):
 
     def continuous_tense_con(self, sent_list):
         """conversion of continuous tense sentences to simple tense"""
-        for sent in sent_list:
-            print(sent)
 
         for i in range(len(sent_list)):
-            # et the sent not marked with #-(for command det) and ###-(for future tense det) earlier
+            # the sent not marked with #-(for command det) and ###-(for future tense det) earlier
             # as index is checked # is enough to filter out both
             if sent_list[i][0] is not "#":
                 content = dict_container.verb_sub_dict.get(i)
@@ -64,8 +69,11 @@ class ContinuousTenseConversion(object):
                                 sent_list[i] = self.plural_sent(negation_availability, sentense, aux_idx, root_verb,
                                                                 base_verb)
 
-        for sent in sent_list:
-            print(sent)
+        for i in range(len(sent_list)):
+            sent_list[i] = sent_list[i][0].lower() + sent_list[i][1:]
+            # print(sent_list[i])
+
+        self.past_tense_conversion_obj.past_tense_con(sent_list)
 
     @staticmethod
     def i_based_sent(negation_availability, sentense, aux_idx, root_verb, base_verb):
@@ -87,6 +95,7 @@ class ContinuousTenseConversion(object):
                 sentense[aux_idx + 1:root_verb]).strip() + " " + base_verb + " " + str(
                 sentense[root_verb + 1:]).strip()
 
+        # VBZ - verb, 3rd person singular present
         return str(sentense[:aux_idx]).strip() + " " + str(
             sentense[aux_idx + 1:root_verb]).strip() + getInflection(base_verb, tag='VBZ')[0] + " " + str(
             sentense[root_verb + 1:]).strip()
