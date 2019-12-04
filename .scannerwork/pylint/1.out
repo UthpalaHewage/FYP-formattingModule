@@ -7,10 +7,8 @@ Model\rule_based_word_patterns.py:26: [C0326(bad-whitespace), ] Exactly one spac
 never_mind_p1 = [{'LOWER': 'never'},{'LOWER': 'mind'}, {'IS_PUNCT': True, 'OP': '?'}]
 
                                    ^
-Model\rule_based_word_patterns.py:54: [C0304(missing-final-newline), ] Final newline missing
 Model\rule_based_word_patterns.py:1: [C0114(missing-module-docstring), ] Missing module docstring
-Model\rule_based_word_patterns.py:1: [W0622(redefined-builtin), ] Redefining built-in 'dict'
-Model\rule_based_word_patterns.py:1: [C0103(invalid-name), ] Constant name "dict" doesn't conform to UPPER_CASE naming style
+Model\rule_based_word_patterns.py:1: [C0103(invalid-name), ] Constant name "dict_of_patterns" doesn't conform to UPPER_CASE naming style
 Model\rule_based_word_patterns.py:3: [C0103(invalid-name), ] Constant name "hello_p1" doesn't conform to UPPER_CASE naming style
 Model\rule_based_word_patterns.py:4: [C0103(invalid-name), ] Constant name "however_p1" doesn't conform to UPPER_CASE naming style
 Model\rule_based_word_patterns.py:5: [C0103(invalid-name), ] Constant name "so_p1" doesn't conform to UPPER_CASE naming style
@@ -39,6 +37,6 @@ Model\rule_based_word_patterns.py:27: [C0103(invalid-name), ] Constant name "hey
 
 ------------------------------------------------------------------
 
-Your code has been rated at 3.92/10 (previous run: 3.92/10, +0.00)
+Your code has been rated at 4.31/10 (previous run: 3.92/10, +0.39)
 
 

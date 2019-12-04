@@ -1,16 +1,10 @@
 ************* Module contraction_removal
-contraction_removal.py:8: [C0301(line-too-long), ] Line too long (134/100)
-contraction_removal.py:40: [C0301(line-too-long), ] Line too long (105/100)
-contraction_removal.py:1: [C0114(missing-module-docstring), ] Missing module docstring
-contraction_removal.py:7: [C0103(invalid-name), contraction_removal] Class name "contraction_removal" doesn't conform to PascalCase naming style
-contraction_removal.py:7: [C0115(missing-class-docstring), contraction_removal] Missing class docstring
-contraction_removal.py:16: [C0116(missing-function-docstring), contraction_removal.expand_contractions] Missing function or method docstring
-contraction_removal.py:21: [W0612(unused-variable), contraction_removal.expand_contractions.expand_match] Unused variable 'first_char'
-contraction_removal.py:16: [R0201(no-self-use), contraction_removal.expand_contractions] Method could be a function
-contraction_removal.py:7: [R0903(too-few-public-methods), contraction_removal] Too few public methods (1/2)
+contraction_removal.py:43: [C0301(line-too-long), ] Line too long (105/100)
+contraction_removal.py:9: [R0205(useless-object-inheritance), ContractionRemoval] Class 'ContractionRemoval' inherits from object, can be safely removed from bases in python3
+contraction_removal.py:9: [R0903(too-few-public-methods), ContractionRemoval] Too few public methods (1/2)
 
 ------------------------------------------------------------------
 
-Your code has been rated at 5.71/10 (previous run: 5.71/10, +0.00)
+Your code has been rated at 8.42/10 (previous run: 8.42/10, +0.00)
 
 

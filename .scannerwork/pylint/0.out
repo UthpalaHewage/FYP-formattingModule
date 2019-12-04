@@ -1,13 +1,12 @@
 ************* Module fact_dict
-Model\fact_dict.py:4: [C0304(missing-final-newline), ] Final newline missing
 Model\fact_dict.py:1: [C0114(missing-module-docstring), ] Missing module docstring
-Model\fact_dict.py:1: [C0103(invalid-name), ] Constant name "facts_on_colon" doesn't conform to UPPER_CASE naming style
-Model\fact_dict.py:2: [C0103(invalid-name), ] Constant name "facts_on_quotes" doesn't conform to UPPER_CASE naming style
-Model\fact_dict.py:3: [C0103(invalid-name), ] Constant name "facts_on_phrases" doesn't conform to UPPER_CASE naming style
-Model\fact_dict.py:4: [C0103(invalid-name), ] Constant name "facts_on_semicolon" doesn't conform to UPPER_CASE naming style
+Model\fact_dict.py:2: [C0103(invalid-name), ] Constant name "facts_on_colon" doesn't conform to UPPER_CASE naming style
+Model\fact_dict.py:4: [C0103(invalid-name), ] Constant name "facts_on_quotes" doesn't conform to UPPER_CASE naming style
+Model\fact_dict.py:6: [C0103(invalid-name), ] Constant name "facts_on_phrases" doesn't conform to UPPER_CASE naming style
+Model\fact_dict.py:8: [C0103(invalid-name), ] Constant name "facts_on_semicolon" doesn't conform to UPPER_CASE naming style
 
 --------------------------------------------------------------------
 
-Your code has been rated at -5.00/10 (previous run: -5.00/10, +0.00)
+Your code has been rated at -2.50/10 (previous run: -5.00/10, +2.50)
 
 

@@ -1,22 +1,13 @@
 ************* Module informal_word_replacement
-informal_word_replacement.py:58: [C0301(line-too-long), ] Line too long (110/100)
-informal_word_replacement.py:73: [C0304(missing-final-newline), ] Final newline missing
-informal_word_replacement.py:1: [C0114(missing-module-docstring), ] Missing module docstring
-informal_word_replacement.py:4: [C0103(invalid-name), ] Constant name "nlp" doesn't conform to UPPER_CASE naming style
-informal_word_replacement.py:5: [C0413(wrong-import-position), ] Import "from spacy.matcher import PhraseMatcher" should be placed at the top of the module
-informal_word_replacement.py:6: [C0413(wrong-import-position), ] Import "import tense_conversion.future_tense_identification as future_tense_detection" should be placed at the top of the module
-informal_word_replacement.py:10: [C0103(invalid-name), informal_word_replacement] Class name "informal_word_replacement" doesn't conform to PascalCase naming style
-informal_word_replacement.py:10: [C0115(missing-class-docstring), informal_word_replacement] Missing class docstring
-informal_word_replacement.py:16: [C0116(missing-function-docstring), informal_word_replacement.informal_word_detection] Missing function or method docstring
-informal_word_replacement.py:16: [R0914(too-many-locals), informal_word_replacement.informal_word_detection] Too many local variables (18/15)
-informal_word_replacement.py:31: [C0200(consider-using-enumerate), informal_word_replacement.informal_word_detection] Consider using enumerate instead of iterating with range and len
-informal_word_replacement.py:47: [C0121(singleton-comparison), informal_word_replacement.informal_word_detection] Comparison to None should be 'expr is None'
-informal_word_replacement.py:21: [W0612(unused-variable), informal_word_replacement.informal_word_detection] Unused variable 'phrase_list'
-informal_word_replacement.py:10: [R0903(too-few-public-methods), informal_word_replacement] Too few public methods (1/2)
-informal_word_replacement.py:2: [C0411(wrong-import-order), ] standard import "import string" should be placed before "import spacy"
+informal_word_replacement.py:65: [C0301(line-too-long), ] Line too long (110/100)
+informal_word_replacement.py:7: [C0103(invalid-name), ] Constant name "nlp" doesn't conform to UPPER_CASE naming style
+informal_word_replacement.py:10: [R0205(useless-object-inheritance), InformalWordReplacement] Class 'InformalWordReplacement' inherits from object, can be safely removed from bases in python3
+informal_word_replacement.py:18: [R0914(too-many-locals), InformalWordReplacement.informal_word_detection] Too many local variables (17/15)
+informal_word_replacement.py:35: [C0200(consider-using-enumerate), InformalWordReplacement.informal_word_detection] Consider using enumerate instead of iterating with range and len
+informal_word_replacement.py:10: [R0903(too-few-public-methods), InformalWordReplacement] Too few public methods (1/2)
 
 ------------------------------------------------------------------
 
-Your code has been rated at 6.51/10 (previous run: 6.51/10, +0.00)
+Your code has been rated at 8.57/10 (previous run: 8.57/10, +0.00)
 
 

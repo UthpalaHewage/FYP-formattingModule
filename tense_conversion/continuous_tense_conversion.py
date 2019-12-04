@@ -1,8 +1,9 @@
 """Identify the sentences in continuous form and make the tense conversion """
-import tense_conversion.Models.verb_sub_container as dict
+import spacy
 import inflect
 from pyinflect import getInflection
-import spacy
+import tense_conversion.Models.verb_sub_container as dict_container
+
 
 nlp = spacy.load('en_core_web_sm')
 
@@ -17,14 +18,15 @@ class ContinuousTenseConversion(object):
         pass
 
     def continuous_tense_con(self, sent_list):
+        """conversion of continuous tense sentences to simple tense"""
         for sent in sent_list:
             print(sent)
-        """conversion of continuous tense sentences to simple tense"""
+
         for i in range(len(sent_list)):
             # et the sent not marked with #-(for command det) and ###-(for future tense det) earlier
             # as index is checked # is enough to filter out both
             if sent_list[i][0] is not "#":
-                content = dict.verb_sub_dict.get(i)
+                content = dict_container.verb_sub_dict.get(i)
 
                 if content is not None:
                     root_verb = content[0]
@@ -33,7 +35,8 @@ class ContinuousTenseConversion(object):
 
                     if str(sentense[root_verb].tag_) == "VBG":
 
-                        # out of the aux identified specifically select the aux matches to aux_list declared
+                        # out of the aux identified specifically select the
+                        # aux matches to aux_list declared
                         # 'str(sentense[idx]) in self.aux_list'
                         aux_index = [idx for idx in range(len(sentense)) if
                                      str(sentense[idx].dep_) == "aux" and subject < idx <
@@ -64,38 +67,38 @@ class ContinuousTenseConversion(object):
         for sent in sent_list:
             print(sent)
 
-    def i_based_sent(self, negation_availability, sentense, aux_idx, root_verb, base_verb):
+    @staticmethod
+    def i_based_sent(negation_availability, sentense, aux_idx, root_verb, base_verb):
         """conversion of sent with 'I'"""
         if negation_availability:
             return str(sentense[:aux_idx]).strip() + " do " + str(
                 sentense[aux_idx + 1:root_verb]).strip() + " " + base_verb + " " + str(
                 sentense[root_verb + 1:]).strip()
 
-        else:
-            return str(sentense[:aux_idx]).strip() + " " + str(
-                sentense[aux_idx + 1:root_verb]).strip() + base_verb + " " + str(
-                sentense[root_verb + 1:]).strip()
+        return str(sentense[:aux_idx]).strip() + " " + str(
+            sentense[aux_idx + 1:root_verb]).strip() + base_verb + " " + str(
+            sentense[root_verb + 1:]).strip()
 
-    def singular_sent(self, negation_availability, sentense, aux_idx, root_verb, base_verb):
+    @staticmethod
+    def singular_sent(negation_availability, sentense, aux_idx, root_verb, base_verb):
         """conversion of singular sent """
         if negation_availability:
             return str(sentense[:aux_idx]).strip() + " does " + str(
                 sentense[aux_idx + 1:root_verb]).strip() + " " + base_verb + " " + str(
                 sentense[root_verb + 1:]).strip()
 
-        else:
-            return str(sentense[:aux_idx]).strip() + " " + str(
-                sentense[aux_idx + 1:root_verb]).strip() + getInflection(base_verb, tag='VBZ')[0] + " " + str(
-                sentense[root_verb + 1:]).strip()
+        return str(sentense[:aux_idx]).strip() + " " + str(
+            sentense[aux_idx + 1:root_verb]).strip() + getInflection(base_verb, tag='VBZ')[0] + " " + str(
+            sentense[root_verb + 1:]).strip()
 
-    def plural_sent(self, negation_availability, sentense, aux_idx, root_verb, base_verb):
+    @staticmethod
+    def plural_sent(negation_availability, sentense, aux_idx, root_verb, base_verb):
         """conversion of plural sent"""
         if negation_availability:
             return str(sentense[:aux_idx]).strip() + " do " + str(
                 sentense[aux_idx + 1:root_verb]).strip() + " " + base_verb + " " + str(
                 sentense[root_verb + 1:]).strip()
 
-        else:
-            return str(sentense[:aux_idx]).strip() + " " + str(
-                sentense[aux_idx + 1:root_verb]).strip() + base_verb + " " + str(
-                sentense[root_verb + 1:]).strip()
+        return str(sentense[:aux_idx]).strip() + " " + str(
+            sentense[aux_idx + 1:root_verb]).strip() + base_verb + " " + str(
+            sentense[root_verb + 1:]).strip()

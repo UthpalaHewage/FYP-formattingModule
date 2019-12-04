@@ -1,18 +1,10 @@
 ************* Module sent_modify_fact_detection
-sent_modify_fact_detection.py:8: [C0301(line-too-long), ] Line too long (126/100)
-sent_modify_fact_detection.py:1: [C0114(missing-module-docstring), ] Missing module docstring
-sent_modify_fact_detection.py:1: [W0622(redefined-builtin), ] Redefining built-in 'dict'
-sent_modify_fact_detection.py:5: [C0103(invalid-name), ] Constant name "nlp" doesn't conform to UPPER_CASE naming style
-sent_modify_fact_detection.py:9: [C0103(invalid-name), sent_modify_fact_detection] Class name "sent_modify_fact_detection" doesn't conform to PascalCase naming style
-sent_modify_fact_detection.py:9: [C0115(missing-class-docstring), sent_modify_fact_detection] Missing class docstring
-sent_modify_fact_detection.py:15: [C0116(missing-function-docstring), sent_modify_fact_detection.sent_modify] Missing function or method docstring
-sent_modify_fact_detection.py:34: [C0116(missing-function-docstring), sent_modify_fact_detection.get_list_of_facts] Missing function or method docstring
-sent_modify_fact_detection.py:34: [W0613(unused-argument), sent_modify_fact_detection.get_list_of_facts] Unused argument 'sent_list'
-sent_modify_fact_detection.py:34: [R0201(no-self-use), sent_modify_fact_detection.get_list_of_facts] Method could be a function
-sent_modify_fact_detection.py:2: [C0411(wrong-import-order), ] third party import "import spacy" should be placed before "import Model.fact_dict as dict"
+sent_modify_fact_detection.py:47: [C0301(line-too-long), ] Line too long (136/100)
+sent_modify_fact_detection.py:6: [C0103(invalid-name), ] Constant name "nlp" doesn't conform to UPPER_CASE naming style
+sent_modify_fact_detection.py:9: [R0205(useless-object-inheritance), SentModifyFactDetection] Class 'SentModifyFactDetection' inherits from object, can be safely removed from bases in python3
 
 ------------------------------------------------------------------
 
-Your code has been rated at 5.42/10 (previous run: 5.42/10, +0.00)
+Your code has been rated at 8.75/10 (previous run: 8.75/10, +0.00)
 
 

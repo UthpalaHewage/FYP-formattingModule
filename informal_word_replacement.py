@@ -1,26 +1,30 @@
-import spacy
+"""Replace the informal word with the corresponding formal word as suits"""
 import string
-
-nlp = spacy.load('en_core_web_sm')
+import spacy
 from spacy.matcher import PhraseMatcher
 import tense_conversion.future_tense_identification as future_tense_detection
 
+nlp = spacy.load('en_core_web_sm')
 
 
-class informal_word_replacement:
-    tense_conversion_obj = future_tense_detection.future_tense_identification()
+class InformalWordReplacement(object):
+    """class for the replacement of the informal words with formal word"""
+    # import the method for the detection of future tense sentences detection and removal
+    tense_conversion_obj = future_tense_detection.FutureTenseIdentification()
 
     def __init__(self):
         pass
 
     def informal_word_detection(self, sent_list):
+        """detection and replacement of informal words with formal words"""
+        # get the punctuations for the manipulation
         punctuation_list = string.punctuation
         matcher = PhraseMatcher(nlp.vocab)
 
-        # need to declare informal-formal word list for replacement
-        phrase_list = []
+        # get the list of informal word list
         with open('Model/informal_word_list.txt', 'r') as file:
             informal_word_list = ["" + line.strip() + "" for line in file]
+        # get the list of formal word list
         with open('Model/formal_word_list.txt', 'r') as file:
             formal_word_list = ["" + line.strip() + "" for line in file]
 
@@ -35,6 +39,7 @@ class informal_word_replacement:
             if len(matches) != 0:
                 # print(sentense[matches[0][1]:matches[0][2]])
                 new_sent = ""
+                # declare variable for later use
                 previous_end = None
                 # get match the informal word with formal word
                 for match in matches:
@@ -44,7 +49,8 @@ class informal_word_replacement:
                     # get the respective formal word upon the index
                     formal_word = formal_word_list[index]
 
-                    if previous_end == None:
+                    # if it indicates a new sentence.
+                    if previous_end is None:
                         new_sent = new_sent + str(sentense[:match[1]]).strip() + " " + formal_word
                         # if next character is not a punctuation need to put a space
                         if str(sentense[match[2]]) not in punctuation_list:
@@ -55,6 +61,7 @@ class informal_word_replacement:
 
                     else:
 
+                        # continuation of sentence
                         new_sent = new_sent + str(sentense[previous_end:match[1]]).strip() + " " + formal_word
                         # if next character is not a punctuation need to put a space
                         if str(sentense[match[2]]) not in punctuation_list:
@@ -67,7 +74,5 @@ class informal_word_replacement:
                 # print(new_sent.strip())
 
                 sent_list[i] = new_sent.strip()
-
-
 
         self.tense_conversion_obj.future_tense_det(sent_list)

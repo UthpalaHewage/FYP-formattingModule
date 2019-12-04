@@ -1,20 +1,11 @@
 ************* Module command_detection
-command_detection.py:8: [C0326(bad-whitespace), ] Exactly one space required after assignment
-    informal_word_replacement_obj =informal_word_replacement.informal_word_replacement()
-
-                                  ^
-command_detection.py:17: [C0301(line-too-long), ] Line too long (140/100)
-command_detection.py:30: [C0304(missing-final-newline), ] Final newline missing
-command_detection.py:1: [C0114(missing-module-docstring), ] Missing module docstring
-command_detection.py:4: [C0103(invalid-name), ] Constant name "nlp" doesn't conform to UPPER_CASE naming style
-command_detection.py:7: [C0103(invalid-name), command_detection] Class name "command_detection" doesn't conform to PascalCase naming style
-command_detection.py:7: [C0115(missing-class-docstring), command_detection] Missing class docstring
-command_detection.py:14: [C0116(missing-function-docstring), command_detection.command_det] Missing function or method docstring
-command_detection.py:16: [C0200(consider-using-enumerate), command_detection.command_det] Consider using enumerate instead of iterating with range and len
-command_detection.py:7: [R0903(too-few-public-methods), command_detection] Too few public methods (1/2)
+command_detection.py:7: [C0103(invalid-name), ] Constant name "nlp" doesn't conform to UPPER_CASE naming style
+command_detection.py:10: [R0205(useless-object-inheritance), CommandDetection] Class 'CommandDetection' inherits from object, can be safely removed from bases in python3
+command_detection.py:20: [C0200(consider-using-enumerate), CommandDetection.command_det] Consider using enumerate instead of iterating with range and len
+command_detection.py:10: [R0903(too-few-public-methods), CommandDetection] Too few public methods (1/2)
 
 ------------------------------------------------------------------
 
-Your code has been rated at 2.86/10 (previous run: 2.86/10, +0.00)
+Your code has been rated at 7.14/10 (previous run: 7.14/10, +0.00)
 
 
