@@ -3,12 +3,16 @@ import spacy
 import inflect
 from pyinflect import getInflection
 import tense_conversion.Models.verb_sub_container as dict_container
+import tense_conversion.perfect_tense_conversion as perfect_tense_conversion
 
 nlp = spacy.load('en_core_web_sm')
 
 
 class PastTenseConversion(object):
     """class for the tense conversion of past tense sentences"""
+
+    # import the method for the conversion of perfecr tense sentences
+    perfect_tense_conversion_obj = perfect_tense_conversion.PerfectTenseConversion()
 
     # check for the singular nature of noun..
     # if the given noun is singular result- False. If not gives the singular form
@@ -18,7 +22,7 @@ class PastTenseConversion(object):
         pass
 
     def past_tense_con(self, sent_list):
-
+        """conversion of past tense sentences to simple tense"""
         for i in range(len(sent_list)):
             # the sent not marked with #-(for command det) and ###-(for future tense det) earlier
             # as index is checked # is enough to filter out both
@@ -63,9 +67,9 @@ class PastTenseConversion(object):
                         else:
                             sent_list[i] = mid_word.replace("did", "do").strip() + " " + end_word.strip()
 
-        for i in range(len(sent_list)):
             sent_list[i] = sent_list[i][0].lower() + sent_list[i][1:]
-            print(sent_list[i])
+
+        self.perfect_tense_conversion_obj.perfect_tense_con(sent_list)
 
     @staticmethod
     def i_based_sent(sentence, root_verb, base_verb):
