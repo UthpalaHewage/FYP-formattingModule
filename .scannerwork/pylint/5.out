@@ -1,13 +1,18 @@
-************* Module informal_word_replacement
-informal_word_replacement.py:65: [C0301(line-too-long), ] Line too long (110/100)
-informal_word_replacement.py:7: [C0103(invalid-name), ] Constant name "nlp" doesn't conform to UPPER_CASE naming style
-informal_word_replacement.py:10: [R0205(useless-object-inheritance), InformalWordReplacement] Class 'InformalWordReplacement' inherits from object, can be safely removed from bases in python3
-informal_word_replacement.py:18: [R0914(too-many-locals), InformalWordReplacement.informal_word_detection] Too many local variables (17/15)
-informal_word_replacement.py:35: [C0200(consider-using-enumerate), InformalWordReplacement.informal_word_detection] Consider using enumerate instead of iterating with range and len
-informal_word_replacement.py:10: [R0903(too-few-public-methods), InformalWordReplacement] Too few public methods (1/2)
+************* Module final_output
+final_output.py:8: [C0326(bad-whitespace), ] Exactly one space required after assignment
+    final_para =""
 
-------------------------------------------------------------------
+               ^
+final_output.py:19: [C0301(line-too-long), ] Line too long (103/100)
+final_output.py:23: [C0301(line-too-long), ] Line too long (101/100)
+final_output.py:4: [R0205(useless-object-inheritance), FinalOutput] Class 'FinalOutput' inherits from object, can be safely removed from bases in python3
+final_output.py:13: [C0116(missing-function-docstring), FinalOutput.final_output] Missing function or method docstring
+final_output.py:14: [C0200(consider-using-enumerate), FinalOutput.final_output] Consider using enumerate instead of iterating with range and len
+final_output.py:15: [R0123(literal-comparison), FinalOutput.final_output] Comparison to literal
+final_output.py:4: [R0903(too-few-public-methods), FinalOutput] Too few public methods (1/2)
 
-Your code has been rated at 8.57/10 (previous run: 8.57/10, +0.00)
+-----------------------------------
+
+Your code has been rated at 6.52/10
 
 

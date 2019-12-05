@@ -2,12 +2,15 @@
 import spacy
 import tense_conversion.Models.verb_sub_container as dict_container
 import tense_conversion.sent_modifier as modifier
+import final_output
 
 nlp = spacy.load('en_core_web_sm')
 
 
 class PerfectTenseConversion(object):
     """class for the tense conversion of perfect tense sentences"""
+    # import the method for the final output of the module
+    final_output_obj = final_output.FinalOutput()
 
     # declare the aux_list need for the  conversion of tenses
     aux_list = ["has", "have", "had"]
@@ -34,5 +37,7 @@ class PerfectTenseConversion(object):
                         if result is not False:
                             sent_list[i] = result[0].lower() + result[1:]
 
-        for sent in sent_list:
-            print(sent)
+        # for sent in sent_list:
+        #     print(sent)
+
+        self.final_output_obj.final_output(sent_list)
