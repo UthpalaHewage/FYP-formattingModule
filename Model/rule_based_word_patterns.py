@@ -1,54 +1,52 @@
 dict_of_patterns = {}
 
-hello_p1 = [{'LOWER': 'hello'}, {'IS_PUNCT': True, 'OP': '?'}]
-however_p1 = [{'LOWER': 'however'}, {'IS_PUNCT': True, 'OP': '?'}]
-so_p1 = [{'LOWER': 'so'}, {'IS_PUNCT': True, 'OP': '?'}]
-now_p1 = [{'LOWER': 'now'}, {'IS_PUNCT': True, 'OP': '?'}]
-also_p1 = [{'LOWER': 'also'}, {'IS_PUNCT': True, 'OP': '?'}]
-but_p1 = [{'LOWER': 'but'}, {'IS_PUNCT': True, 'OP': '?'}]
-perhaps_p1 = [{'LOWER': 'perhaps'}, {'IS_PUNCT': True, 'OP': '?'}]
-or_p1 = [{'LOWER': 'or'}, {'IS_PUNCT': True, 'OP': '?'}]
-again_p1 = [{'LOWER': 'again'}, {'IS_PUNCT': True, 'OP': '?'}]
-greetings_p1 = [{'LOWER': 'greetings'}, {'IS_PUNCT': True, 'OP': '?'}]
-sometimes_p1 = [{'LOWER': 'sometimes'}, {'IS_PUNCT': True, 'OP': '?'}]
-finally_p1 = [{'LOWER': 'finally'}, {'IS_PUNCT': True, 'OP': '?'}]
-here_p1 = [{'LOWER': 'here'}, {'IS_PUNCT': True, 'OP': '?'}]
-indeed_p1 = [{'LOWER': 'indeed'}, {'IS_PUNCT': True, 'OP': '?'}]
-everyone_p1 = [{'LOWER': 'everyone'}, {'IS_PUNCT': True, 'OP': '?'}]
-hi_p1 = [{'LOWER': 'hi'}, {'IS_PUNCT': True, 'OP': '?'}]
-welcome_p1 = [{'LOWER': 'welcome'}, {'IS_PUNCT': True, 'OP': '?'}]
-gosh_p1 = [{'LOWER': 'gosh'}, {'IS_PUNCT': True, 'OP': '?'}]
-so_p1 = [{'LOWER': 'so'}, {'IS_PUNCT': True, 'OP': '?'}]
-shun_p1 = [{'LOWER': 'shun'}, {'IS_PUNCT': True, 'OP': '?'}]
-gasp_p1 = [{'LOWER': 'gasp'}, {'IS_PUNCT': True, 'OP': '?'}]
-dude_p1 = [{'LOWER': 'dude'}, {'IS_PUNCT': True, 'OP': '?'}]
-good_morning_p1 = [{'LOWER': 'good'},{'LOWER': 'morning'}, {'IS_PUNCT': True, 'OP': '?'}]
-never_mind_p1 = [{'LOWER': 'never'},{'LOWER': 'mind'}, {'IS_PUNCT': True, 'OP': '?'}]
-hey_p1 = [{'LOWER': 'hey'}, {'IS_PUNCT': True, 'OP': '?'}]
+HELLO_P1 = [{'LOWER': 'hello'}, {'IS_PUNCT': True, 'OP': '?'}]
+HOWEVER_P1 = [{'LOWER': 'however'}, {'IS_PUNCT': True, 'OP': '?'}]
+SO_P1 = [{'LOWER': 'so'}, {'IS_PUNCT': True, 'OP': '?'}]
+NOW_P1 = [{'LOWER': 'now'}, {'IS_PUNCT': True, 'OP': '?'}]
+ALSO_P1 = [{'LOWER': 'also'}, {'IS_PUNCT': True, 'OP': '?'}]
+BUT_P1 = [{'LOWER': 'but'}, {'IS_PUNCT': True, 'OP': '?'}]
+PERHAPS_P1 = [{'LOWER': 'perhaps'}, {'IS_PUNCT': True, 'OP': '?'}]
+OR_P1 = [{'LOWER': 'or'}, {'IS_PUNCT': True, 'OP': '?'}]
+AGAIN_P1 = [{'LOWER': 'again'}, {'IS_PUNCT': True, 'OP': '?'}]
+GREETINGS_P1 = [{'LOWER': 'greetings'}, {'IS_PUNCT': True, 'OP': '?'}]
+SOMETIMES_P1 = [{'LOWER': 'sometimes'}, {'IS_PUNCT': True, 'OP': '?'}]
+FINALLY_P1 = [{'LOWER': 'finally'}, {'IS_PUNCT': True, 'OP': '?'}]
+HERE_P1 = [{'LOWER': 'here'}, {'IS_PUNCT': True, 'OP': '?'}]
+INDEED_P1 = [{'LOWER': 'indeed'}, {'IS_PUNCT': True, 'OP': '?'}]
+EVERYONE_P1 = [{'LOWER': 'everyone'}, {'IS_PUNCT': True, 'OP': '?'}]
+HI_P1 = [{'LOWER': 'hi'}, {'IS_PUNCT': True, 'OP': '?'}]
+WELCOME_P1 = [{'LOWER': 'welcome'}, {'IS_PUNCT': True, 'OP': '?'}]
+GOSH_P1 = [{'LOWER': 'gosh'}, {'IS_PUNCT': True, 'OP': '?'}]
+SHUN_P1 = [{'LOWER': 'shun'}, {'IS_PUNCT': True, 'OP': '?'}]
+GASP_P1 = [{'LOWER': 'gasp'}, {'IS_PUNCT': True, 'OP': '?'}]
+DUDE_P1 = [{'LOWER': 'dude'}, {'IS_PUNCT': True, 'OP': '?'}]
+GOOD_MORNING_P1 = [{'LOWER': 'good'},{'LOWER': 'morning'}, {'IS_PUNCT': True, 'OP': '?'}]
+NEVER_MIND_P1 = [{'LOWER': 'never'},{'LOWER': 'mind'}, {'IS_PUNCT': True, 'OP': '?'}]
+HEY_P1 = [{'LOWER': 'hey'}, {'IS_PUNCT': True, 'OP': '?'}]
 
 
-dict_of_patterns.update({"hello_p1": hello_p1})
-dict_of_patterns.update({"however_p1": however_p1})
-dict_of_patterns.update({"so_p1": so_p1})
-dict_of_patterns.update({"now_p1": now_p1})
-dict_of_patterns.update({"also_p1": also_p1})
-dict_of_patterns.update({"but_p1": but_p1})
-dict_of_patterns.update({"perhaps_p1": perhaps_p1})
-dict_of_patterns.update({"or_p1": or_p1})
-dict_of_patterns.update({"again_p1": again_p1})
-dict_of_patterns.update({"greetings_p1": greetings_p1})
-dict_of_patterns.update({"sometimes_p1": sometimes_p1})
-dict_of_patterns.update({"finally_p1": finally_p1})
-dict_of_patterns.update({"here_p1": here_p1})
-dict_of_patterns.update({"indeed_p1": indeed_p1})
-dict_of_patterns.update({"everyone_p1": everyone_p1})
-dict_of_patterns.update({"hi_p1": hi_p1})
-dict_of_patterns.update({"welcome_p1": welcome_p1})
-dict_of_patterns.update({"gosh_p1": gosh_p1})
-dict_of_patterns.update({"so_p1": so_p1})
-dict_of_patterns.update({"shun_p1": shun_p1})
-dict_of_patterns.update({"gasp_p1": gasp_p1})
-dict_of_patterns.update({"dude_p1": dude_p1})
-dict_of_patterns.update({"good_morning_p1": good_morning_p1})
-dict_of_patterns.update({"never_mind_p1": never_mind_p1})
-dict_of_patterns.update({"hey_p1": hey_p1})
+dict_of_patterns.update({"HELLO_P1": HELLO_P1})
+dict_of_patterns.update({"HOWEVER_P1": HOWEVER_P1})
+dict_of_patterns.update({"SO_P1": SO_P1})
+dict_of_patterns.update({"NOW_P1": NOW_P1})
+dict_of_patterns.update({"ALSO_P1": ALSO_P1})
+dict_of_patterns.update({"BUT_P1": BUT_P1})
+dict_of_patterns.update({"PERHAPS_P1": PERHAPS_P1})
+dict_of_patterns.update({"OR_P1": OR_P1})
+dict_of_patterns.update({"AGAIN_P1": AGAIN_P1})
+dict_of_patterns.update({"GREETINGS_P1": GREETINGS_P1})
+dict_of_patterns.update({"SOMETIMES_P1": SOMETIMES_P1})
+dict_of_patterns.update({"FINALLY_P1": FINALLY_P1})
+dict_of_patterns.update({"HERE_P1": HERE_P1})
+dict_of_patterns.update({"INDEED_P1": INDEED_P1})
+dict_of_patterns.update({"EVERYONE_P1": EVERYONE_P1})
+dict_of_patterns.update({"HI_P1": HI_P1})
+dict_of_patterns.update({"WELCOME_P1": WELCOME_P1})
+dict_of_patterns.update({"GOSH_P1": GOSH_P1})
+dict_of_patterns.update({"SHUN_P1": SHUN_P1})
+dict_of_patterns.update({"GASP_P1": GASP_P1})
+dict_of_patterns.update({"DUDE_P1": DUDE_P1})
+dict_of_patterns.update({"GOOD_MORNING_P1": GOOD_MORNING_P1})
+dict_of_patterns.update({"NEVER_MIND_P1": NEVER_MIND_P1})
+dict_of_patterns.update({"HEY_P1": HEY_P1})
