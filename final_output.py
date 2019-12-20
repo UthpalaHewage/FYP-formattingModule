@@ -36,4 +36,5 @@ class FinalOutput(object):
             print(sent)
 
         print("---------------------------------------------")
+        print("formatted content")
         print(self.final_para.strip())
