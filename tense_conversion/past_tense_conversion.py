@@ -69,6 +69,8 @@ class PastTenseConversion(object):
 
             sent_list[i] = sent_list[i][0].lower() + sent_list[i][1:]
 
+
+
         self.perfect_tense_conversion_obj.perfect_tense_con(sent_list)
 
     @staticmethod

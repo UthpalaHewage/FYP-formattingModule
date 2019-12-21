@@ -2,15 +2,16 @@
 import spacy
 import tense_conversion.Models.verb_sub_container as dict_container
 import tense_conversion.sent_modifier as modifier
-import final_output
+from passive_conversion import to_passive_voice
 
 nlp = spacy.load('en_core_web_sm')
 
 
 class PerfectTenseConversion(object):
     """class for the tense conversion of perfect tense sentences"""
-    # import the method for the final output of the module
-    final_output_obj = final_output.FinalOutput()
+
+    # import the method for the paasive voice conversion of the module
+    to_passive_voice_obj = to_passive_voice.ConversionToPassive()
 
     # declare the aux_list need for the  conversion of tenses
     aux_list = ["has", "have", "had"]
@@ -40,4 +41,5 @@ class PerfectTenseConversion(object):
         # for sent in sent_list:
         #     print(sent)
 
-        self.final_output_obj.final_output(sent_list)
+
+        self.to_passive_voice_obj.sub_root_obj_detection(sent_list)
