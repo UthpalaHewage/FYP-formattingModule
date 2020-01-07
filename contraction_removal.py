@@ -12,6 +12,7 @@ class ContractionRemoval(object):
     # when 'I' losses its capitalization when at first place
     # then wont detect as pronoun so need to forcefully give the expansion form
     contractions_dict.update({'i\'m': 'i am'})
+    contractions_dict.update({'here\'s': 'here is'})
     # import the method for the filteration of unwanted words found in the content
     word_filteration_obj = word_filteration.WordFilteration()
 

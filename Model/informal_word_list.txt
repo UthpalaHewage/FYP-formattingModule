@@ -44,7 +44,6 @@ clothes
 come after
 come in
 come up to
-complex
 dad
 danger
 dare
@@ -148,7 +147,6 @@ put off
 put up with
 rack up
 really big
-refer to
 remove
 rich
 right
@@ -186,8 +184,6 @@ tired
 tough
 try
 try out
-use
-use
 wait for
 want
 whole
@@ -195,4 +191,4 @@ wood
 worse
 wrong
 young
-
+put

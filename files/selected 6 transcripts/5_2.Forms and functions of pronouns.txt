@@ -5,7 +5,7 @@ which comes from the Latin word 'nomen'; to name. So, a pronoun stands in place 
 a noun, a noun phrase, or a name. A pronoun is a noun substitute, a word that works on behalf of a noun.
 This table shows English pronouns in both singular and plural forms.
 Pronouns can vary according to number, person, and case.
-The person—first person, second person, or third person—depends on whether the person
+The person-first person, second person, or third person-depends on whether the person
 is speaking, 'I' or 'we', whether the person is being spoken to, 'you', or whether the person
 is being spoken of, 'he', 'she', 'it', or 'they'. The concept of person applies to things as well.
 'It', for example, is a third person pronoun.
@@ -14,10 +14,10 @@ Demonstrative pronouns 'point to'. They include 'this', 'that', 'these', 'those'
 They can fulfil subject, object, and complement roles in a sentence.
 Interrogative pronouns pose questions: 'Who' and 'whom' for persons; 'which', 'what', 'whose',
 and 'where' for other things.
-Relative pronouns relate to an antecedent—what has come before—and join that antecedent
-to a modifying clause. These are 'who', 'whoever', 'whom', and 'whomever'—for persons and animals
-who have names; 'whose'—for the possessive of people, animals, and things; 'which' and
-'that'—for animals and inanimate objects; and 'what'—an indefinite relative pronoun that
+Relative pronouns relate to an antecedent-what has come before-and join that antecedent
+to a modifying clause. These are 'who', 'whoever', 'whom', and 'whomever'-for persons and animals
+who have names; 'whose'-for the possessive of people, animals, and things; 'which' and
+'that'-for animals and inanimate objects; and 'what'-an indefinite relative pronoun that
 stands for an undefined or unidentified antecedent.
 For example, 'I don't know what they want'.
 One pronoun problem that you might like to take note of is something we call 'that-creep'.
@@ -34,10 +34,10 @@ Reflexive pronouns include 'myself', 'yourself', 'himself', 'herself', 'itself',
 People often use these wrongly, as a kind of genteelism, thinking that they are being polite.
 Here's a quote from a Colin Dexter novel, where reflexive pronouns do some heavy lifting:
 'If he'd (Morse) made something of himself, he'd made something of himself himself, as he'd once put things'.
-Intensive, or emphatic, pronouns are—you guessed it—used for emphasis. Again, these include
+Intensive, or emphatic, pronouns are-you guessed it-used for emphasis. Again, these include
 'myself', 'yourself', 'himself', 'herself', 'itself', 'ourselves', 'yourselves', and 'themselves'.
 For example, 'I, myself, witnessed the meltdown.'
-Distributive pronouns refer to persons or things one at a time—'each', 'either', 'neither'.
+Distributive pronouns refer to persons or things one at a time-'each', 'either', 'neither'.
 They always take a singular verb. For example: 'Each of the students studies hard.'
 And, finally, the expletive pronouns: 'It' and 'there'. In grammar, the word expletive does not mean
 an oath or a swear word. It actually comes from the Latin, 'expletivus', which means

@@ -26,10 +26,10 @@ or that I wish would happen. These can include conditional statements, suppositi
 demands, commands, suggestions, proposals, and statements of necessity.
 Some examples of the subjunctive mood include: 'If only it were so'; 'if I were you'; 'long live the Queen'.
 The subjunctive mood affects the form of the verb. For example, 'am' or 'was' become 'were',
-'is' becomes 'be' and 'are' becomes 'be'. Additionally, singular verbs lose their '–s' and '–es' endings.
+'is' becomes 'be' and 'are' becomes 'be'. Additionally, singular verbs lose their '-s' and '-es' endings.
 Let's take a look at some other examples.
 'We recommend that the department reform its financial systems'.
-'It is imperative that the copywriter be able to…'
+'It is imperative that the copywriter be able to.'
 Voice is the property of a verb that tells whether the subject acts or is acted upon.
 A verb is in the active voice when the subject of the sentence is the doer or agent of the
 act. For example: 'I wrote a book', where I am the agent carrying out an action.

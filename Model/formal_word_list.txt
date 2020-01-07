@@ -9,7 +9,7 @@ request
 invite
 initially
 immediately
-evade
+prevent
 absent
 negative
 assault
@@ -44,7 +44,6 @@ garment
 follow
 enter
 reach
-convoluted
 father
 peril
 challenge
@@ -73,7 +72,7 @@ obtain
 elude
 survive
 escape
-donate
+provide with
 distribute
 quit
 depart
@@ -88,7 +87,7 @@ continue
 exit
 examine
 increase
-provide
+fine
 beneficial
 attractive
 please
@@ -99,7 +98,7 @@ futile
 famished
 haste
 damage
-notion
+point
 envisage
 responsible
 finally
@@ -119,7 +118,7 @@ connect
 reside
 energetic
 rich
-regard
+focus on
 seek
 investigate
 resemble
@@ -148,7 +147,6 @@ postpone
 tolerate
 accumulate
 considerable
-consult
 eliminate
 wealthy
 correct
@@ -186,8 +184,6 @@ exhausted
 difficult
 endeavour
 test
-consume
-utilize
 await
 desire
 entire
@@ -195,4 +191,4 @@ timber
 inferior
 incorrect
 youthful
-
+use
