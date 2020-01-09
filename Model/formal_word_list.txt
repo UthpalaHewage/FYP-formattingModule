@@ -13,7 +13,7 @@ prevent
 absent
 negative
 assault
-improved
+improve
 enormous
 undermine
 explode
@@ -51,7 +51,7 @@ manage
 demise
 depict
 indistinct
-contaminated
+contaminate
 withdraw
 avid
 facilitate
@@ -95,7 +95,7 @@ assist
 present
 criticize
 futile
-famished
+famish
 haste
 damage
 point
