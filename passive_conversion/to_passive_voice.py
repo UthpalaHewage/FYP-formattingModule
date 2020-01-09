@@ -23,6 +23,7 @@ class ConversionToPassive(object):
     with open('passive_conversion/obj_patterns', 'r') as file:
         phrase_list = ["" + line.strip() + "" for line in file]
 
+    # declare the object patterns possible in the sentences
     object_patterns = [nlp(text) for text in phrase_list]
     matcher.add('Object_Matcher', None, *object_patterns)
 
@@ -39,7 +40,7 @@ class ConversionToPassive(object):
             # as index is checked # is enough to filter out both
             if sent_list[i][0] is not "#":
                 content = dict_container.verb_sub_dict.get(i)
-                sentence = nlp(sent_list[i])
+                sentence = nlp(sent_list[i][0].upper() + sent_list[i][1:])
                 # check for the dep_=ROOT and pos_=VERB combination to get as the base root of the sentence
                 root_verb_index = [idx for idx in range(len(sentence)) if
                                    str(sentence[idx].dep_) == "ROOT" and str(sentence[idx].pos_) == "VERB"]
@@ -84,7 +85,8 @@ class ConversionToPassive(object):
                                         negation_availability = self.check_negation(str(sentence[:root_verb]))
                                         # responsible for passive sentence creation
                                         result = self.create_passive(sentence, int(root_verb), int(obj_index[0]),
-                                                                     int(object_start_idx), int(object_end_idx),negation_availability)
+                                                                     int(object_start_idx), int(object_end_idx),
+                                                                     negation_availability)
                                         sent_list[i] = result.strip()
 
                                 else:
@@ -104,6 +106,7 @@ class ConversionToPassive(object):
 
         self.final_output_obj.final_output(sent_list)
 
+    # get the object of the related sentence as per the match
     @staticmethod
     def get_object_bound(sentence):
         new_sentence = ""
@@ -126,41 +129,46 @@ class ConversionToPassive(object):
     @staticmethod
     def create_passive(doc, root_idx, obj_index, obj_start, obj_end, negation_availability):
         # 'obj_end + 2' check whether sent ends with fullstop or not. If end with '.' need not to keep space in-between
-        if len(doc) > obj_end + 2:
-            if negation_availability:
-                if inflect.singular_noun(str(doc[obj_index])) is False:
+        print(doc)
+        try:
 
-                    return str(doc[obj_start:obj_end]) + " is not " + str(
-                        getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + " " + str(doc[obj_end:])
-                else:
-                    return str(doc[obj_start:obj_end]) + " are not " + str(
-                        getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + " " + str(doc[obj_end:])
-            else:
-                if inflect.singular_noun(str(doc[obj_index])) is False:
+            if len(doc) > obj_end + 2:
+                if negation_availability:
+                    if inflect.singular_noun(str(doc[obj_index])) is False:
 
-                    return str(doc[obj_start:obj_end]) + " is " + str(
-                        getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + " " + str(doc[obj_end:])
+                        return str(doc[obj_start:obj_end]) + " is not " + str(
+                            getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + " " + str(doc[obj_end:])
+                    else:
+                        return str(doc[obj_start:obj_end]) + " are not " + str(
+                            getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + " " + str(doc[obj_end:])
                 else:
-                    return str(doc[obj_start:obj_end]) + " are " + str(
-                        getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + " " + str(doc[obj_end:])
-            # print(negation_availability)
-        else:
-            # sentence ending with object ;need keep a fullstop just after word without a space
-            if negation_availability:
-                if inflect.singular_noun(str(doc[obj_index])) is False:
-                    return str(doc[obj_start:obj_end]) + " is not " + str(
-                        getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + "."
-                else:
-                    return str(doc[obj_start:obj_end]) + " are not" + str(
-                        getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + "."
+                    if inflect.singular_noun(str(doc[obj_index])) is False:
+
+                        return str(doc[obj_start:obj_end]) + " is " + str(
+                            getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + " " + str(doc[obj_end:])
+                    else:
+                        return str(doc[obj_start:obj_end]) + " are " + str(
+                            getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + " " + str(doc[obj_end:])
+                # print(negation_availability)
             else:
-                if inflect.singular_noun(str(doc[obj_index])) is False:
-                    return str(doc[obj_start:obj_end]) + " is " + str(
-                        getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + "."
+                # sentence ending with object ;need keep a fullstop just after word without a space
+                if negation_availability:
+                    if inflect.singular_noun(str(doc[obj_index])) is False:
+                        return str(doc[obj_start:obj_end]) + " is not " + str(
+                            getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + "."
+                    else:
+                        return str(doc[obj_start:obj_end]) + " are not" + str(
+                            getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + "."
                 else:
-                    return str(doc[obj_start:obj_end]) + " are " + str(
-                        getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + "."
-            # print(negation_availability)
+                    if inflect.singular_noun(str(doc[obj_index])) is False:
+                        return str(doc[obj_start:obj_end]) + " is " + str(
+                            getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + "."
+                    else:
+                        return str(doc[obj_start:obj_end]) + " are " + str(
+                            getInflection(doc[root_idx].lemma_, tag='VBN')[0]) + "."
+                # print(negation_availability)
+        except:
+            return str(doc)
 
     @staticmethod
     def check_negation(sentence):
